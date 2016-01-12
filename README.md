@@ -7,6 +7,9 @@ Thanks to [dotbot](https://github.com/anishathalye/dotbot), installing my dotfil
 
 Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into the dotfiles folder `cd dotfiles`, and run the install script `source install`
 
+### Configuration
+The configuration for dotbot is in install.conf.yaml. See [dotbot's documentation](https://github.com/anishathalye/dotbot#configuration) for more details on how to link files/derectories and run shell commands during the configuration process.
+
 ### Inspiration
 * [Mathias Bynens'](https://mathiasbynens.be/) ever popluar [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
 * [Ben Altman's](http://benalman.com/) [dotfiles repository](https://github.com/cowboy/dotfiles)
