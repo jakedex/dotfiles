@@ -1,14 +1,11 @@
 # Dotfiles
-The more I tinker around with Unix/bash/Linux, the more unorganized my dotfiles become - so, I decided to finally to this right. These dotfiles are currently only working on OSX, but I'm working on adding support for Arch Linux and other distros soon.
+The more I tinker around with Unix/bash/Linux, the more unorganized my dotfiles become - so, I decided to finally to do this right. These dotfiles are currently only working on OSX, but I'm working on adding support for Arch Linux and other distros soon.
 
 ![My terminal setup](http://www.jakedex.com/img/dotfiles.png)
-
 ### Installation
 Thanks to [dotbot](https://github.com/anishathalye/dotbot), installing my dotfiles is relitively easy.
 
-Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`
-cd into the dotfiles folder `cd dotfiles`
-and run the install script `source install`
+Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into the dotfiles folder `cd dotfiles`, and run the install script `source install`
 
 ### Inspiration
 * [Mathias Bynens'](https://mathiasbynens.be/) ever popluar [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
