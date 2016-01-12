@@ -10,7 +10,7 @@ Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into
 ### Inspiration
 * [Mathias Bynens'](https://mathiasbynens.be/) ever popluar [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
 * [Ben Altman's](http://benalman.com/) [dotfiles repository](https://github.com/cowboy/dotfiles)
-* [Anish Athalye's](http://www.anishathalye.com/)'s wonderful [dotbot](https://github.com/anishathalye/dotbot) and [dotfiles guide](http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+* [Anish Athalye's](http://www.anishathalye.com/) wonderful [dotbot](https://github.com/anishathalye/dotbot) and [dotfiles guide](http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
 
 ### License
 Copyright (c) 2016 Jacob Dexheimer. Released under the MIT License. See [LICENSE.md](https://github.com/jakedex/dotfiles/blob/master/LICENSE) for details.
