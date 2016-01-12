@@ -2,7 +2,13 @@
 
 - link:
     ~/.bash_profile: bash_profile
+    ~/.bash_prompt: bash_prompt
     ~/.bashrc: bashrc
+    ~/.exports: exports
+    ~/.functions: functions
     ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.path: path
+
 
 
