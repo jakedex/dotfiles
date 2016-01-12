@@ -1,7 +1,7 @@
 # Dotfiles
 The more I tinker around with Unix/bash/Linux, the more unorganized my dotfiles become - so, I decided to finally to do this right. These dotfiles are currently only working on OSX, but I'm working on adding support for Arch Linux and other distros soon.
 
-![My terminal setup](http://www.jakedex.com/img/dotfiles.png1)
+![My terminal setup](http://www.jakedex.com/img/dotfiles.png)
 ### Installation
 Thanks to [dotbot](https://github.com/anishathalye/dotbot), installing my dotfiles is relitively easy.
 
