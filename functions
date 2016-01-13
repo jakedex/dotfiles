@@ -49,3 +49,9 @@ function extract() {
 	fi
 }
 
+# Easy .dotfiles editing
+function el() {
+	if [ -s ~/.dotfiles-local/"$*" ]; then
+		nano "$*"
+	fi
+}
