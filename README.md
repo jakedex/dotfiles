@@ -5,7 +5,7 @@ The more I tinker around with Unix/bash/Linux, the more unorganized my dotfiles 
 ## Installation
 Thanks to [dotbot](https://github.com/anishathalye/dotbot), installing my dotfiles is relitively easy.
 
-Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into the dotfiles folder `cd dotfiles`, and run the install script `source install`.
+Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into the dotfiles folder `cd dotfiles`, and run the install script `./install`.
 
 ## Configuration
 The configuration for dotbot is in `install.conf.yaml`. See [dotbot's documentation](https://github.com/anishathalye/dotbot#configuration) for more details on how to link files/derectories and run shell commands during the configuration process.
