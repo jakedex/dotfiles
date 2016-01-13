@@ -11,13 +11,13 @@ for file in ~/.{path,exports_local,aliases_local,functions_local,bash_profile_lo
         [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# OSX-only stuff below. Abort if not OSX.
+[[ "$OSTYPE" =~ ^darwin ]] || return 1
  
 # z beats cd most of the time.
 #   github.com/rupa/z
 source `brew --prefix`/etc/profile.d/z.sh
-
-# OSX-only stuff below. Abort if not OSX.
-[[ "$OSTYPE" =~ ^darwin ]] || return 1
 
 # Print sys stats
 archey

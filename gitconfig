@@ -38,3 +38,5 @@
   untracked = cyan
 [include]
         path = ~/.gitconfig_local
+[push]
+	default = matching
