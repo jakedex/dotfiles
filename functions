@@ -52,6 +52,12 @@ function extract() {
 # Easy .dotfiles editing
 function el() {
 	if [ -s ~/.dotfiles-local/"$*" ]; then
-		nano "$*"
+		nano ~/.dotfiles-local/"$*"
 	fi
+}
+
+function e() {
+        if [ -s ~/.dotfiles/"$*" ]; then
+                nano ~/.dotfiles/"$*"
+        fi
 }
