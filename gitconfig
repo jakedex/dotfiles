@@ -2,19 +2,10 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-[user]
-	name = Jake Dexheimer
-	email = jakedex@gmail.com
-[credential]
-	helper = osxkeychain
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
-[core]
-	autocrlf = input
-	safecrlf = true
-	excludesfile = /Users/jakedex/.gitignore_global
 [alias]
   co = checkout
   ci = commit
@@ -45,9 +36,5 @@
   added = yellow
   changed = green
   untracked = cyan
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[include]
+        path = ~/.gitconfig_local

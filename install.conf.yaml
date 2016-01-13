@@ -7,8 +7,7 @@
     ~/.exports: exports
     ~/.functions: functions
     ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.path: path
+
 
 
 

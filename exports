@@ -1,8 +1,2 @@
 export EDITOR=/usr/bin/nano
 
-### Added by the Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
-
-### Added by brew nvm install - http://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-br$
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
