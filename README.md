@@ -11,7 +11,7 @@ Just clone the repo `git clone https://github.com/jakedex/dotfiles.git`, cd into
 The configuration for dotbot is in `install.conf.yaml`. See [dotbot's documentation](https://github.com/anishathalye/dotbot#configuration) for more details on how to link files/directories and run shell commands during the configuration process.
 
 ## Sensible OS X defaults
-When setting up a new mac, the `.osx` script will set some sensible OS X defaults. These are my handpicked preferences from [Mathias Bynen's .osx script](https://github.com/mathiasbynens/dotfiles/blob/master/.osx). The script also installs all of my default applications with [Homebrew Cask](http://caskroom.io/). 
+When setting up a new mac, the `.osx` script will set some sensible OS X defaults. These are my handpicked preferences from [Mathias Bynens' .osx script](https://github.com/mathiasbynens/dotfiles/blob/master/.osx). The script also installs all of my default applications with [Homebrew Cask](http://caskroom.io/). 
 
 ## Inspiration
 * [Mathias Bynens'](https://mathiasbynens.be/) ever popluar [dotfiles repository and .osx script](https://github.com/mathiasbynens/dotfiles)
