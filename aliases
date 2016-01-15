@@ -23,7 +23,7 @@ alias vhelp="less ~/Notes/cmd_notes.md"
 alias ehelp="$EDITOR ~/Notes/cmd_notes.md"
 alias sshpi="ssh alarm@192.168.1.137"
 alias npmls="npm list -g --depth=0"
-alias vimconfig="$EDITOR ~/.vimrc"
+alias vimconfig="$EDITOR ~/.dotfiles/vim/vimrc"
 
 # git
 alias ghp="git checkout gh-pages && git merge master && git push && git checkout master"
