@@ -4,18 +4,13 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Markdown syntax highlighting, etc
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -23,11 +18,48 @@ call vundle#end()            " required
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
+" Solarized plugin (color scheme)
+" https://github.com/altercation/vim-colors-solarized
+set background=dark
+colorscheme solarized
+
 " Switch syntax highlighting on
 syntax on
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+
+" Number of visual spaces per TAB
+set tabstop=4
+
+" Number of spaces in tab when editing
+set softtabstop=4
+
+" tabs => spaces
+set expandtab
+
+" Show last command entered
+set showcmd
+
+" Highlight current line
+set cursorline
+
+" Visual autocomplete for command menu
+set wildmenu
+
+" highlight matching [{()}]
+set showmatch
+
+" Searching
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+nnoremap <leader><space> :nohlsearch<CR> " turn off search hl
+
+" Folding
+set foldenable " enable folding
+set foldlevelstart=10 " open most folds by default
+nnoremap <space> za " space open/closes folds
+set foldmethod=indent " fold based on indent level
 
 " Show line numbers
 set number
@@ -41,3 +73,9 @@ set history=100
 " Change swapfile location to be less annoying
 " set backupdir=~/.vim/backup//
 " set directory=~/.vim/swp//
+
+" Keymappings
+" Enter to insert blank line below current, Shift+Enter to insert it above
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
