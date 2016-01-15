@@ -8,7 +8,7 @@
     ~/.exports: exports
     ~/.functions: functions
     ~/.gitconfig: gitconfig
-
+    ~/.vimrc: vim/vimrc
 
 
 
