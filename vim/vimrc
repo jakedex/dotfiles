@@ -78,4 +78,5 @@ set history=100
 " Enter to insert blank line below current, Shift+Enter to insert it above
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
+inoremap jk <ESC>
 
