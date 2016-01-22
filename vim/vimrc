@@ -9,7 +9,16 @@ Plugin 'VundleVim/Vundle.vim'
 " Markdown syntax highlighting, etc
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'lilydjwg/colorizer'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+" PEP8 checking
+Plugin 'nvie/vim-flake8'
 
+" Python auto-indent
+Plugin 'vim-scripts/indentpython.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -28,6 +37,9 @@ syntax on
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+
+" UTF8
+set encoding=utf-8
 
 " Number of visual spaces per TAB
 set tabstop=4
@@ -57,6 +69,7 @@ nnoremap <leader><space> :nohlsearch<CR> " turn off search hl
 
 " Folding
 set foldenable " enable folding
+let g:SimpylFold_docstring_preview=1
 set foldlevelstart=10 " open most folds by default
 nnoremap <space> za " space open/closes folds
 set foldmethod=indent " fold based on indent level
@@ -79,4 +92,22 @@ set history=100
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
 inoremap jk <ESC>
+map <C-n> :NERDTreeToggle<CR>
 
+" Python settings - PEP8 indentation
+au BufNewFile,BufRead *.py set tabstop=3
+au BufNewFile,BufRead *.py set shiftwidth=4
+au BufNewFile,BufRead *.py set textwidth=79
+au BufNewFile,BufRead *.py set expandtab
+au BufNewFile,BufRead *.py set autoindent
+au BufNewFile,BufRead *.py set fileformat=unix
+au BufNewFile,BufRead *.py set softtabstop=4
+
+" Python settings - flag unnecessary whitespace
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" Pretty python code
+let python_highlight_all=1
