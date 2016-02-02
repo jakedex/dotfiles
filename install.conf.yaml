@@ -9,6 +9,6 @@
     ~/.functions: functions
     ~/.gitconfig: gitconfig
     ~/.vimrc: vim/vimrc
-
+    ~/.vim/.ycm_extra_conf.py: vim/ycm_extra_conf.py
 
 
