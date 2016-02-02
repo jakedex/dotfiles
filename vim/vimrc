@@ -109,7 +109,7 @@ au BufNewFile,BufRead *.py set softtabstop=4
 au BufNewFile,BufRead *.c set tabstop=4
 au BufNewFile,BufRead *.c set softtabstop=4
 au BufNewFile,BufRead *.c set shiftwidth=4
-au BufNewFile,BufRead *.c set noexpandtab=4
+au BufNewFile,BufRead *.c set noexpandtab
 
 
 " YouCompleteMe
