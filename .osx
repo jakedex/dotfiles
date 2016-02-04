@@ -157,61 +157,61 @@ for app in "Activity Monitor" "Finder" "Mail"; do
 	killall "${app}" &> /dev/null
 done
 
-###############################################################################
-# Cask Installs                                                               #
-###############################################################################
-
-# Installs Default applications/plugins/tweaks with Homebrew casks
-# Credit: https://github.com/cowboy/dotfiles/blob/master/init/30_osx_homebrew_casks.sh
-
-# Exit if Homebrew is not installed.
-[[ ! "$(type -P brew)" ]] && e_error "Brew casks need Homebrew to install." && return 1
-
-# Exit if, for some reason, cask is not installed.
-[[ ! "$(brew ls --versions brew-cask)" ]] && e_error "Brew-cask failed to install." && return 1
-
-# Hack to show the first-run brew-cask password prompt immediately.
-brew cask info this-is-somewhat-annoying 2>/dev/null
-
-# Homebrew casks
-casks=(
-  # Applications
-  bettertouchtool
-  chromium
-  dropbox
-  firefox
-  google-chrome
-  iterm2
-  macvim
-  skype
-  slack
-  spotify
-  steam
-  the-unarchiver
-  vlc
-  # Quick Look plugins
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-csv
-  quicklook-json
-  quicknfo
-  suspicious-package
-  webpquicklook
-  # Color pickers
-  colorpicker-developer
-)
-
-# Install Homebrew casks.
-casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
-if (( ${#casks[@]} > 0 )); then
-  e_header "Installing Homebrew casks: ${casks[*]}"
-  for cask in "${casks[@]}"; do
-    brew cask install $cask
-  done
-  brew cask cleanup
-fi
+#################################################################################
+### Cask Installs                                                               #
+#################################################################################
+##
+### Installs Default applications/plugins/tweaks with Homebrew casks
+### Credit: https://github.com/cowboy/dotfiles/blob/master/init/30_osx_homebrew_casks.sh
+##
+### Exit if Homebrew is not installed.
+##[[ ! "$(type -P brew)" ]] && e_error "Brew casks need Homebrew to install." && return 1
+##
+### Exit if, for some reason, cask is not installed.
+##[[ ! "$(brew ls --versions brew-cask)" ]] && e_error "Brew-cask failed to install." && return 1
+##
+### Hack to show the first-run brew-cask password prompt immediately.
+##brew cask info this-is-somewhat-annoying 2>/dev/null
+##
+### Homebrew casks
+##casks=(
+##  # Applications
+##  bettertouchtool
+##  chromium
+##  dropbox
+##  firefox
+##  google-chrome
+##  iterm2
+##  macvim
+##  skype
+##  slack
+##  spotify
+##  steam
+##  the-unarchiver
+##  vlc
+##  # Quick Look plugins
+##  betterzipql
+##  qlcolorcode
+##  qlmarkdown
+##  qlprettypatch
+##  qlstephen
+##  quicklook-csv
+##  quicklook-json
+##  quicknfo
+##  suspicious-package
+##  webpquicklook
+##  # Color pickers
+##  colorpicker-developer
+##)
+##
+### Install Homebrew casks.
+##casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
+##if (( ${#casks[@]} > 0 )); then
+##  e_header "Installing Homebrew casks: ${casks[*]}"
+##  for cask in "${casks[@]}"; do
+##    brew cask install $cask
+##  done
+##  brew cask cleanup
+##fi
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
