@@ -7,6 +7,25 @@ nls() {
         ls -c ~/Notes/ | grep "$*"
 }
 
+# Commit notes
+function nu() {
+    if ! git -C ~/Notes diff --quiet
+    then
+        git -C ~/Notes add "$*".md
+        git -C ~/Notes commit -m "Update $*.md"
+        git -C ~/Notes status
+        read -p "Push changes? (y/n) " -n 1
+        echo
+        if [[ $REPLY =~ ^[Nn]$ ]]; then
+            return
+        fi
+
+        git -C ~/Notes push
+    else
+        echo "No changes"
+    fi
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
