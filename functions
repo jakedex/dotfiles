@@ -71,12 +71,12 @@ function extract() {
 # Easy .dotfiles editing
 function el() {
 	if [ -s ~/.dotfiles-local/"$*" ]; then
-		$EDITOR ~/.dotfiles-local/"$*"
+		vim ~/.dotfiles-local/"$*"
 	fi
 }
 
 function e() {
         if [ -s ~/.dotfiles/"$*" ]; then
-                $EDITOR ~/.dotfiles/"$*"
+               vim ~/.dotfiles/"$*"
         fi
 }

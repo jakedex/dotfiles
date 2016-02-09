@@ -8,7 +8,8 @@
     ~/.exports: exports
     ~/.functions: functions
     ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
-
+    ~/.vim/.ycm_extra_conf.py: vim/ycm_extra_conf.py
 
 

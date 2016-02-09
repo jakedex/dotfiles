@@ -23,7 +23,7 @@ alias vhelp="less ~/Notes/cmd_notes.md"
 alias ehelp="$EDITOR ~/Notes/cmd_notes.md"
 alias sshpi="ssh jake@172.16.70.222"
 alias npmls="npm list -g --depth=0"
-alias vimconfig="$EDITOR ~/.dotfiles/vim/vimrc"
+alias vimconfig="vim ~/.dotfiles/vim/vimrc"
 alias sshcs="dexheimer@best-linux.cs.wisc.edu"
 
 # git
