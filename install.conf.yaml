@@ -11,5 +11,6 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/.ycm_extra_conf.py: vim/ycm_extra_conf.py
+    ~/.vim/plugin/whitespace/whitespace.vim: vim/plugin/whitespace/whitespace.vim
 
 
