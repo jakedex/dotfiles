@@ -1,1 +1,9 @@
 # Aliases created by the command save bash function, als
+
+alias rmbr="git push origin --delete"
+
+alias rmbl="git branch -D"
+
+alias gcb="git checkout -b"
+
+alias hp="git push heroku master"
