@@ -31,6 +31,7 @@ set backspace=indent,eol,start
 set background=dark
 colorscheme solarized
 
+
 " Switch syntax highlighting on
 syntax on
 

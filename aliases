@@ -25,6 +25,7 @@ alias sshpi="ssh jake@172.16.70.222"
 alias npmls="npm list -g --depth=0"
 alias vimconfig="vim ~/.dotfiles/vim/vimrc"
 alias sshcs="dexheimer@best-linux.cs.wisc.edu"
+alias alsl="cat ~/.dotfiles/als_aliases"
 
 # git
 alias ghp="git checkout gh-pages && git merge master && git push && git checkout master"
@@ -69,3 +70,6 @@ alias sudo='sudo '
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Load aliases from ALS function
+source ~/.dotfiles/als_aliases
