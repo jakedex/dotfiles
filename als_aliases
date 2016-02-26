@@ -9,3 +9,5 @@ alias gcb="git checkout -b"
 alias hp="git push heroku master"
 
 alias compress="tar czf"
+
+alias unstage="git reset HEAD"
