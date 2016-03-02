@@ -104,3 +104,12 @@ als() {
 		alias $1
 	fi
 }
+
+
+# Update dotfiles
+function udot() {
+    git -C ~/.dotfiles pull
+    if [ -s ~/.dotfiles-local/ ]; then
+        git -C ~/.dotfiles-local pull
+    fi
+}

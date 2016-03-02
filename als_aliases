@@ -13,3 +13,5 @@ alias compress="tar czf"
 alias gco="git checkout"
 
 alias greset="git reset --hard"
+
+alias unstage="git reset HEAD"
