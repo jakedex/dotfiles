@@ -15,3 +15,5 @@ alias gco="git checkout"
 alias greset="git reset --hard"
 
 alias unstage="git reset HEAD"
+
+alias grs="git reset --soft HEAD~"
