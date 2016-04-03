@@ -16,9 +16,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/Align'
 Plugin 'tpope/vim-commentary'
 
 call vundle#end()
@@ -26,11 +25,10 @@ call vundle#end()
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
-" Solarized plugin (color scheme)
-" https://github.com/altercation/vim-colors-solarized
+" base16-default plugin (color scheme)
 set background=dark
-colorscheme solarized
-
+colorscheme base16-default
+let base16colorspace=256
 
 " Switch syntax highlighting on
 syntax on
@@ -133,6 +131,16 @@ au BufNewFile,BufRead *.c set noexpandtab
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Pretty python code
 let python_highlight_all=1
