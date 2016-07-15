@@ -19,3 +19,7 @@ alias unstage="git reset HEAD"
 alias grs="git reset --soft HEAD~"
 
 alias archive="tar -cvzf"
+
+alias dbs="sudo mysql.server start"
+
+alias gds="git diff --staged"
