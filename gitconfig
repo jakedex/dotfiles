@@ -40,3 +40,10 @@
         path = ~/.gitconfig_local
 [push]
 	default = matching
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Jake Dexheimer
+	email = jakedex@gmail.com
