@@ -29,7 +29,7 @@ alias alsl="cat ~/.dotfiles/als_aliases"
 
 # git
 alias ghp="git checkout gh-pages && git merge master && git push && git checkout master"
-alias gs='git status '
+alias gs='git status -sb'
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
@@ -38,6 +38,10 @@ alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git --oneline'
+
+# Colored up cat!
+# You must install Pygments first - "sudo easy_install Pygments"
+alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

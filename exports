@@ -4,3 +4,6 @@ BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-paraiso.dark.sh"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

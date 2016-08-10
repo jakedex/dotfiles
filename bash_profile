@@ -14,9 +14,7 @@ unset file;
 
 # OSX-only stuff below. Abort if not OSX.
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
- 
+
 # z beats cd most of the time.
 #   github.com/rupa/z
 source `brew --prefix`/etc/profile.d/z.sh
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
