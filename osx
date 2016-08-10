@@ -152,6 +152,17 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+# Export compact SVGs in Sketch 3
+defaults write com.bohemiancoding.sketch3 exportCompactSVG -bool yes
+
+# Use Plain Text Mode as Default
+defaults write com.apple.TextEdit RichText -int 0
+
+# Uninstall all unavailable xcode simulators
+xcrun simctl delete unavailable
+
+
+
 # Kill affected applications
 for app in "Activity Monitor" "Finder" "Mail"; do
 	killall "${app}" &> /dev/null
