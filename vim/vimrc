@@ -29,7 +29,7 @@ set backspace=indent,eol,start
 
 " base16-default plugin (color scheme)
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 let base16colorspace=256
 
 " Switch syntax highlighting on
