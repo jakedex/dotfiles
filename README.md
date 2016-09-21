@@ -14,9 +14,19 @@ You can clone the repository wherever you want (I keep mine in `~/.dotfiles`). T
 git clone https://github.com/jakedex/dotfiles.git .dotfiles && cd .dotfiles && ./install
 ```
 
-#### Sensible OS X defaults
+#### Sensible OS X Defaults
 When setting up a new mac, the `.osx` script will set some sensible OS X defaults. These are my handpicked preferences from [Mathias Bynens' .osx script](https://github.com/mathiasbynens/dotfiles/blob/master/.osx).
 The script also installs all of my default applications with [Homebrew Cask](http://caskroom.io/).
+
+#### Getting Vim Up and Running
+You'll need to make sure [Vundle](https://github.com/VundleVim/Vundle.vim) is installed in order to install my Vim plugins/use my `.vimrc` properly. Use the following command to install Vundle.
+
+```
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+You can then install my Vim plugins by opening vim and running `:PluginInstall`. 
+
 
 ## Configuration
 The configuration for dotbot is in `install.conf.yaml`. See [dotbot's documentation](https://github.com/anishathalye/dotbot#configuration) for more details on how to link files/directories and run shell commands during the configuration process.
