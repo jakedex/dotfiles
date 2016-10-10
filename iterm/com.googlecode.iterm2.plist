@@ -744,13 +744,13 @@
 	<key>HotKeyTogglesWindow</key>
 	<false/>
 	<key>Hotkey</key>
-	<false/>
+	<true/>
 	<key>HotkeyChar</key>
-	<integer>0</integer>
+	<integer>32</integer>
 	<key>HotkeyCode</key>
-	<integer>0</integer>
+	<integer>49</integer>
 	<key>HotkeyModifiers</key>
-	<integer>0</integer>
+	<integer>524288</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>
@@ -808,11 +808,13 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>469 568 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-486 -556 400 129 -1440 -449 1440 877 </string>
+	<string>638 449 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>648 498 620 392 0 0 1920 1057 </string>
+	<string>528 476 620 392 0 0 1680 1027 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>-1171 257 937 465 -1440 127 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 6 834 1015 0 0 1680 1027 </string>
+	<string>-1437 127 1434 877 -1440 127 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>275 101 885 621 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -1724,7 +1726,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-29T18:44:16Z</date>
+	<date>2016-10-01T06:04:51Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1774,12 +1776,12 @@
 	<key>WindowStyle</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
-	<string>/-+\~_.</string>
+	<string></string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.4</string>
+	<string>3.0.9</string>
 </dict>
 </plist>

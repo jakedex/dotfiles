@@ -27,3 +27,5 @@ alias gds="git diff --staged"
 alias npmlg="npm list -g --depth=0"
 
 alias dds="find . -name '*.DS_Store' -type f -delete"
+
+alias gcm="gc -m"
