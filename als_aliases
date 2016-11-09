@@ -29,3 +29,9 @@ alias npmlg="npm list -g --depth=0"
 alias dds="find . -name '*.DS_Store' -type f -delete"
 
 alias gcm="gc -m"
+
+alias jd-deploy="gco release && git merge develop && git push && npm run deploy && gco develop"
+
+alias t-deploy="gco gh-pages && git merge master && git push && gco master"
+
+alias sq-deploy="gco master && git merge develop && git push && gco develop"
