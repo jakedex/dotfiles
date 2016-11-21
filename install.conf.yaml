@@ -5,11 +5,13 @@
     ~/.bash_profile: bash_profile
     ~/.bash_prompt: bash_prompt
     ~/.bashrc: bashrc
+    ~/.eslintrc: eslintrc
     ~/.exports: exports
     ~/.functions: functions
     ~/.gitconfig: gitconfig
     ~/.hushlogin: hushlogin
     ~/.irbrc: irbrc
+    ~/.stylelintrc: stylelintrc
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/.ycm_extra_conf.py: vim/ycm_extra_conf.py
