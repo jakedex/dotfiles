@@ -1,0 +1,23 @@
+[
+  {
+    "link": {
+      "~/.aliases": "aliases",
+      "~/.bash_profile": "bash_profile",
+      "~/.bash_prompt": "bash_prompt",
+      "~/.bashrc": "bashrc",
+      "~/.eslintrc": "eslintrc",
+      "~/.stylelintrc": "stylelintrc",
+      "~/.exports": "exports",
+      "~/.functions": "functions",
+      "~/.hushlogin": "hushlogin",
+      "~/.gitconfig": "gitconfig",
+      "~/.irbrc": "irbrc",
+      "~/.tmux.conf": "tmux/tmux.conf",
+      "~/.vimrc": "vim/vimrc",
+      "~/.vim": "vim"
+     }
+  },
+  {
+    "clean": ["~"]
+  }
+]
