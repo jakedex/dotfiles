@@ -1,10 +1,3 @@
-# jakedex dotfiles
-# Sources:
-# https://github.com/mathiasbynens/dotfiles
-
-# Quickview this file
-alias va="less ~/.aliases"
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -15,17 +8,12 @@ alias -- -="cd -"
 
 # mv, rm, cp
 alias mv='mv -v'
-alias rm='rm -i -v'
+alias rm='rm -v'
 alias cp='cp -v'
 
 # Shortcuts
-alias vhelp="less ~/Notes/cmd_notes.md"
-alias ehelp="$EDITOR ~/Notes/cmd_notes.md"
-alias sshpi="ssh jake@172.16.70.222"
 alias npmls="npm list -g --depth=0"
-alias vimconfig="vim ~/.dotfiles/vim/vimrc"
-alias sshcs="dexheimer@best-linux.cs.wisc.edu"
-alias alsl="cat ~/.dotfiles/als_aliases"
+alias va="less ~/.aliases"
 
 # git
 alias ghp="git checkout gh-pages && git merge master && git push && git checkout master"
@@ -34,15 +22,23 @@ alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias gl='git --oneline'
+alias gco='git checkout '
+alias gl='git log --oneline'
+alias tower='gittower'
 
-# Colored up cat!
-# You must install Pygments first - "sudo easy_install Pygments"
-alias c='pygmentize -O style=monokai -f console256 -g'
+### Terminal Syntax Highlighting (https://gist.github.com/textarcana/4611277#gistcomment-1701305)
+## cat/less
+# Setup: "brew install highlight"
 
+# Pipe Highlight to less
+export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style pablo"
+export LESS=" -R"
+alias less='less -m -N -g -i -J --line-numbers --underline-special'
+
+# Use "highlight" in place of "cat"
+alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style pablo"
+
+## ls
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
