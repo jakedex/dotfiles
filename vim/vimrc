@@ -1,39 +1,57 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+" ----------------------------------------------------------------------------
+"   Plug
+" ----------------------------------------------------------------------------
 
-" Markdown syntax highlighting, etc
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'lilydjwg/colorizer'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Install vim-plug if we don't already have it
+if empty(glob("~/.vim/autoload/plug.vim"))
+    " Ensure all needed directories exist
+    if !isdirectory($HOME."/.vim/plugged")
+        silent call mkdir($HOME."/.vim/plugged", "p")
+    endif
+    if !isdirectory($HOME."/.vim/autoload")
+        silent call mkdir($HOME."/.vim/autoload", "p")
+    endif
+    " Download the actual plugin manager
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'tmhedberg/SimpylFold'
+Plug 'lilydjwg/colorizer'
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+" ----------------------------------------------------------------------------
+"   Base Options
+" ----------------------------------------------------------------------------
 
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
-" base16-default plugin (color scheme)
-set background=dark
-colorscheme base16-default-dark
-let base16colorspace=256
+" Centralize backups, swapfiles, and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+          set undodir=~/.vim/undo
+endif
 
-" Switch syntax highlighting on
-syntax on
+" Don't create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
@@ -44,21 +62,43 @@ set autoread
 " UTF8
 set encoding=utf-8
 
-" Number of visual spaces per TAB
-set tabstop=4
+" Allow hidden buffers, don't limit to 1 file per window/split
+set hidden
 
-" Number of spaces in tab when editing
-set softtabstop=4
+" Default is 8, my machines can handle quite a bit more
+set history=100
+
+" Incase you forgot to sudo
+cnoremap w!! %!sudo tee > /dev/null %
+
+" Searching
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+nnoremap <leader><leader> :nohlsearch<CR> " turn off search hl
+set ignorecase  " case-insensitive search
+
+" Folding
+set foldenable " enable folding
+let g:SimpylFold_docstring_preview=1
+set foldlevelstart=10 " open most folds by default
+nnoremap <space> za " space open/closes folds
+set foldmethod=indent " fold based on indent level
+
+" ----------------------------------------------------------------------------
+"   Visual
+" ----------------------------------------------------------------------------
+
+" base16-default plugin (color scheme)
+set background=dark
+colorscheme base16-default-dark
+let base16colorspace=256
+
+" Switch syntax highlighting on
+syntax on
 
 " show trailing whitespace
 set list
 set listchars=tab:▸\ ,trail:▫
-
-" Strip trailing whitespace
-nnoremap <leader>$ :call whitespace#strip_trailing()<CR>
-
-" tabs => spaces
-set expandtab
 
 " Show last command entered
 set showcmd
@@ -74,19 +114,6 @@ set wildmode=longest,list,full
 " highlight matching [{()}]
 set showmatch
 
-" Searching
-set incsearch " search as characters are entered
-set hlsearch " highlight matches
-nnoremap <leader><leader> :nohlsearch<CR> " turn off search hl
-set ignorecase  " case-insensitive search
-
-" Folding
-set foldenable " enable folding
-let g:SimpylFold_docstring_preview=1
-set foldlevelstart=10 " open most folds by default
-nnoremap <space> za " space open/closes folds
-set foldmethod=indent " fold based on indent level
-
 " Show line numbers
 set number
 
@@ -96,22 +123,33 @@ set ruler
 " show context above/below cursorline
 set scrolloff=3
 
-" Allow hidden buffers, don't limit to 1 file per window/split
-set hidden
+" ----------------------------------------------------------------------------
+"   Tabs
+" ----------------------------------------------------------------------------
 
-" Default is 8, my machines can handle quite a bit more
-set history=100
+" Number of visual spaces per TAB
+set tabstop=4
 
-" Incase you forgot to sudo
-cnoremap w!! %!sudo tee > /dev/null %
+" Number of spaces in tab when editing
+set softtabstop=4
 
-" Keymappings
+" tabs => spaces
+set expandtab
+
+" ----------------------------------------------------------------------------
+"   Keymappings
+" ----------------------------------------------------------------------------
+
 " Enter to insert blank line below current, Shift+Enter to insert it above
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
 inoremap jk <ESC>
 map <C-n> :NERDTreeToggle<CR>
 noremap <leader>l :Align
+
+" ----------------------------------------------------------------------------
+"   Language-Specific
+" ----------------------------------------------------------------------------
 
 " Python settings - PEP8 indentation
 au BufNewFile,BufRead *.py set tabstop=3
@@ -125,10 +163,18 @@ au BufNewFile,BufRead *.py set softtabstop=4
 " Python settings - flag unnecessary whitespace
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" Pretty python code
+let python_highlight_all=1
+
+" C settings - Spacing/indentation
 au BufNewFile,BufRead *.c set tabstop=4
 au BufNewFile,BufRead *.c set softtabstop=4
 au BufNewFile,BufRead *.c set shiftwidth=4
 au BufNewFile,BufRead *.c set noexpandtab
+
+" ----------------------------------------------------------------------------
+"   Plugin Configuration
+" ----------------------------------------------------------------------------
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -143,9 +189,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Pretty python code
-let python_highlight_all=1
 
 " vim-airline
 set laststatus=2
