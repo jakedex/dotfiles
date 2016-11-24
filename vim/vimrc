@@ -24,7 +24,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tmhedberg/SimpylFold'
 Plug 'lilydjwg/colorizer'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': '~/.vim/ycm_extra_conf.py' }
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'vim-scripts/indentpython.vim'
