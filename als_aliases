@@ -4,15 +4,11 @@ alias rmbr="git push origin --delete"
 
 alias rmbl="git branch -D"
 
-alias gcb="git checkout -b"
-
 alias hp="git push heroku master"
 
 alias compress="tar czf"
 
-alias gco="git checkout"
-
-alias greset="git reset --hard"
+alias grh="git reset --hard"
 
 alias unstage="git reset HEAD"
 
@@ -23,10 +19,6 @@ alias archive="tar -cvzf"
 alias dbs="sudo mysql.server start"
 
 alias gds="git diff --staged"
-
-alias npmlg="npm list -g --depth=0"
-
-alias dds="find . -name '*.DS_Store' -type f -delete"
 
 alias gcm="gc -m"
 
