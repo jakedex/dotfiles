@@ -74,9 +74,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Never go into computer sleep mode
 sudo systemsetup -setcomputersleep Off > /dev/null
 
-# Disable Notification Center and remove the menu bar icon
-# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
@@ -160,8 +157,6 @@ defaults write com.apple.TextEdit RichText -int 0
 
 # Uninstall all unavailable xcode simulators
 xcrun simctl delete unavailable
-
-
 
 # Kill affected applications
 for app in "Activity Monitor" "Finder" "Mail"; do
