@@ -12,3 +12,9 @@ BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-paraiso.dark.sh"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+# z beats cd most of the time.
+#   github.com/rupa/z
+if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
+  source $(brew --prefix)/etc/profile.d/z.sh
+fi
