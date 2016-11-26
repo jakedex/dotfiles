@@ -7,6 +7,7 @@
       "~/.bashrc": "bashrc",
       "~/.eslintrc": "eslintrc",
       "~/.stylelintrc": "stylelintrc",
+      "~/.extra": "extra",
       "~/.exports": "exports",
       "~/.functions": "functions",
       "~/.hushlogin": "hushlogin",
@@ -14,7 +15,8 @@
       "~/.irbrc": "irbrc",
       "~/.tmux.conf": "tmux/tmux.conf",
       "~/.vimrc": "vim/vimrc",
-      "~/.vim": "vim"
+      "~/.vim": "vim",
+      "~/.zshrc": "zshrc"
      }
   },
   {

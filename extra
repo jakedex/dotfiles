@@ -1,0 +1,17 @@
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# z beats cd most of the time.
+#   github.com/rupa/z
+if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
+  source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+# thefuck
+eval "$(thefuck --alias)"
+
+# iTerm 2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
