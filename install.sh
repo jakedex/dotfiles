@@ -128,4 +128,10 @@ else
     echo "Error installing brew... brew + packages not installed."
 fi
 
+###############################################################################
+# Powerline fonts
+###############################################################################
+
+source ./fonts/powerline-fonts/install.sh
+
 echo "Done!"
