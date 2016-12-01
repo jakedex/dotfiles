@@ -1,9 +1,9 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule "lib/github/dracula-iterm"]
-	path = lib/github/dracula-iterm
+[submodule "vendor/github/dotbot"]
+	path = vendor/github/dotbot
+	url = https://github.com/anishathalye/dotbot.git
+[submodule "vendor/github/dracula-iterm"]
+	path = vendor/github/dracula-iterm
 	url = https://github.com/dracula/iterm.git
-[submodule "lib/github/powerline-fonts"]
-	path = lib/github/powerline-fonts
+[submodule "vendor/github/powerline-fonts"]
+	path = vendor/github/powerline-fonts
 	url = https://github.com/powerline/fonts.git

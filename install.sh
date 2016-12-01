@@ -11,7 +11,7 @@ echo "Linking with dotbot:"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 CONFIG="install.conf.json"
-DOTBOT_DIR="dotbot"
+DOTBOT_DIR="vendor/github/dotbot"
 DOTBOT_BIN="bin/dotbot"
 
 cd "${BASEDIR}"
