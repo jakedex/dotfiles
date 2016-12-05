@@ -1,3 +1,6 @@
 {
-  "extends": "/Users/jakedex/.nvm/versions/node/v6.3.0/lib/node_modules/stylelint-config-sass-guidelines/"
+  "extends": "/Users/jakedex/.nvm/versions/node/v6.3.0/lib/node_modules/stylelint-config-sass-guidelines/",
+  "rules": {
+    "declaration-block-properties-order": "default"
+  }
 }
