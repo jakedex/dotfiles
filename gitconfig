@@ -44,3 +44,6 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[user]
+	email = jakedex@gmail.com
+	name = Jake Dexheimer
