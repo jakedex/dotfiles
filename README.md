@@ -25,9 +25,9 @@ You can clone the repository wherever you want (I keep mine in `~/.dotfiles`). T
 * Install [Homebrew](http://brew.sh/) (if it isn't already installed) and install my [brew formulae](https://github.com/jakedex/dotfiles/blob/master/install.sh#L76)
 
 To install, simply copy and paste the following into your command prompt:
-
+(Notice the recursive flag - you'll need that to initialize and download the git submodules in this repository)
 ```
-git clone https://github.com/jakedex/dotfiles.git ~/.dotfiles && . ~/.dotfiles/install.sh
+git clone --recursive -j8 https://github.com/jakedex/dotfiles.git ~/.dotfiles && . ~/.dotfiles/install.sh
 ```
 
 ### Sensible macOS Defaults
