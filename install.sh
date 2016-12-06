@@ -75,7 +75,7 @@ fi
 ###############################################################################
 
 ## abort if not macOS
-[[ "$OSTYPE" =~ ^darwin ]] || return 1
+[[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
 ## install homebrew + formulae?
 pecho "Would you like to install Homebrew (http://brew.sh/) + my formulae? [y/N] "
