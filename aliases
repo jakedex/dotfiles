@@ -30,13 +30,15 @@ alias tower='gittower'
 ## cat/less
 # Setup: "brew install highlight"
 
-# Pipe Highlight to less
-export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style pablo"
-export LESS=" -R"
-alias less='less -m -N -g -i -J --line-numbers --underline-special'
+if command_exists highlight ; then
+    # Pipe Highlight to less
+    export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style pablo"
+    export LESS=" -R"
+    alias less='less -m -N -g -i -J --line-numbers --underline-special'
 
-# Use "highlight" in place of "cat"
-alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style pablo"
+    # Use "highlight" in place of "cat"
+    alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style pablo"
+fi
 
 ## ls
 # Detect which `ls` flavor is in use
