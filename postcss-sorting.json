@@ -1,0 +1,6 @@
+{
+    "sort-order": "default",
+    "empty-lines-between-children-rules": 1,
+    "empty-lines-between-media-rules": 1,
+    "preserve-empty-lines-between-children-rules": true
+}
