@@ -4,7 +4,7 @@
       "~/.aliases": "aliases",
       "~/.eslintrc": "eslintrc",
       "~/.stylelintrc": "stylelintrc",
-      "~/.postcss-sorting.json": "portcss-sorting.json",
+      "~/.postcss-sorting.json": "postcss-sorting.json",
       "~/.extra": "extra",
       "~/.exports": "exports",
       "~/.functions": "functions",
