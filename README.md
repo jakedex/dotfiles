@@ -26,9 +26,9 @@ You can clone the repository wherever you want (I keep mine in `~/.dotfiles`). T
 
 To install, simply copy and paste the following into your command prompt:
 ```
-git clone --recursive -j8 https://github.com/jakedex/dotfiles.git ~/.dotfiles && . ~/.dotfiles/install.sh
+git clone --recursive https://github.com/jakedex/dotfiles.git ~/.dotfiles && . ~/.dotfiles/install.sh
 ```
-(Notice the recursive and j8 flags - you'll need them to initialize and download the git submodules in this repository)
+(Notice the recursive flag - you'll need it to initialize and download the git submodules in this repository)
 
 ### Sensible macOS Defaults
 When setting up a new mac, the `.osx` script will set some sensible OS X defaults. These are my handpicked preferences from [Mathias Bynens' .osx script](https://github.com/mathiasbynens/dotfiles/blob/master/.osx).
