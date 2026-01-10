@@ -13,6 +13,7 @@ alias cp='cp -v'
 # Shortcuts
 alias npmls="npm list -g --depth=0"
 alias va="less ~/.aliases"
+alias cc='claude --chrome'
 
 # git
 alias ghp="git checkout gh-pages && git merge master && git push && git checkout master"
@@ -36,7 +37,7 @@ if command_exists highlight ; then
     alias less='less -m -N -g -i -J --line-numbers --underline-special'
 
     # Use "highlight" in place of "cat"
-    alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style pablo"
+    # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style pablo"
 fi
 
 ## ls
